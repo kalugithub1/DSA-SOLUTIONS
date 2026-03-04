@@ -95,3 +95,18 @@ console.log(isPowerOfTwo(2)); //true
 console.log(isPowerOfTwo(5)); //false
 
 //Big-O = O(logn)
+
+//Optimized isPowerOfTwo function
+function isPowerOfTwoBitwise(n) {
+  if (n < 1) {
+    return false;
+  }
+  return (n & (n - 1)) === 0;
+}
+
+console.log("isPowerOfTwoBitwise Results:");
+console.log(isPowerOfTwoBitwise(1)); //true
+console.log(isPowerOfTwoBitwise(2)); //true
+console.log(isPowerOfTwoBitwise(5)); //false
+
+//Big-O = O(1)
