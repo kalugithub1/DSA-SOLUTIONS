@@ -17,6 +17,24 @@ console.log(fibonacci(20));
 
 //Big-O =O(n)
 
+//Find the nth Fibonacci number
+
+function fibonacci(n) {
+  if (n <= 1) return n;
+
+  let prev = 0;
+  let curr = 1;
+
+  for (let i = 2; i <= n; i++) {
+    let next = prev + curr;
+    prev = curr;
+    curr = next;
+  }
+
+  return curr;
+}
+//Big-O =O(n)
+
 // Given an integer 'n', find the factorial of that integer
 function factorial(n) {
   let result = 1;
